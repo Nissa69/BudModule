@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Catégories</h1>
+    <NewCategory />
+    <CategoryList />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CategoryList from './components/CategoryList.vue'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    CategoryList
   }
 }
+
 </script>
 
 <style>
+
+*,*::before, *::after {
+  box-sizing: border-box;
+}
+
 #app {
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.4;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: greyscale;
+  color: $vue-blue;
+}
+
+h1 {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
